@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // \/ \/ \/ \/ \/ \/ from friend finder, pretty sure i don't need apis.
 // require("./app/routing/apiRoutes")(app);
-require("./routes/htmlRoutes.js")(app);
+require("./routes/htmlRoutes")(app);
 
 
 app.listen(PORT, function () {

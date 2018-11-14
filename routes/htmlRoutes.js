@@ -2,11 +2,16 @@ var path = require("path");
 
 module.exports = function (app) {
 
-    app.get("/survey", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/survey.html"));
-    });
-
-    app.get("*", function (req, res) {
+    app.get("/", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/html/index.html"));
     });
+
+    app.get("/about", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/html/about.html"));
+    });
+
+    app.get("/portfolio", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/html/portfolio.html"));
+    });
+
 };
